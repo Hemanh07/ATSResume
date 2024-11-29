@@ -1,0 +1,48 @@
+.container      {
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+
+}
+
+form {
+     display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 50px;
+     border-radius: 30px;
+     background-color: rgba(0,0,0,0.1);
+}
+ 
+input {
+height: 20px;
+width: 300px;
+border: 0 ;
+border-bottom: 1px solid black;
+outline: 0;
+font-size: 20px;
+background-color: transparent;
+}
+ 
+button {
+    border: 0;
+    border-radius: 30px;
+    color: white;
+    font-size: 30px;
+}
+.loginButton{
+    background-color: rgb(3, 55, 3);
+
+}
+i span{
+    color: rgb(204, 2, 2);
+}
+
+.InputBox{
+
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}

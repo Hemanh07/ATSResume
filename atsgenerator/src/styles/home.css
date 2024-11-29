@@ -1,0 +1,37 @@
+h1{
+    display: inline-block;
+    font-size: 50px;
+}
+nav ,li{
+    display: inline-block;
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+ul{
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+}
+li{
+    height:50px ;
+    width: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#login,#signup{
+    border: 3px rgb(255, 255, 255) double;
+    border-radius: 50px;
+    background-color: rgb(3, 55, 3);
+    color: #ffffff;
+    font-size: 25px;
+    
+}
+
+#signup{
+    background-color: rgb(205, 2, 2);
+}
