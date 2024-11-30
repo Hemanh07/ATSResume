@@ -23,12 +23,14 @@ li{
     justify-content: center;
     align-items: center;
 }
-#login,#signup{
-    border: 3px rgb(255, 255, 255) double;
-    border-radius: 50px;
+#login,#signup,#logout{
+    border: 3px rgb(255, 255, 255) solid;
+    border-radius: 500px;
     background-color: rgb(3, 55, 3);
     color: #ffffff;
     font-size: 25px;
+    padding: 10px;
+
     
 }
 

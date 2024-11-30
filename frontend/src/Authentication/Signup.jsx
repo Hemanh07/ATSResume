@@ -8,7 +8,7 @@ const handleSubmit = (event) => {
 };
 const Signup = () => {
   const navigate = useNavigate();
-
+  
   return (
     <div className="container">
       <form action="post" onSubmit={handleSubmit}>

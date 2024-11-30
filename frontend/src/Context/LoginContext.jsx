@@ -12,13 +12,13 @@ export const UserDataProvider =  ({children})=>{
         password:"",
         confrimPassword:"",
         email:"",
-        isLoggedIn:false,
-
-    })
+ 
+    });
+    const [isLoggedIn,setIsLoggedIn]=useState(false);
     return(
         <UserDataContext.Provider
             value={{
-                userDetails,setUserDetails
+                userDetails,setUserDetails,isLoggedIn,setIsLoggedIn
             }}
         >
             {children}

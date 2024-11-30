@@ -9,13 +9,15 @@ import { handleDataChange } from "../EventHandler/handleChange";
 
 const Login = () => {
   const navigate = useNavigate();
-  const {userDetails,setUserDetails} = useContext(UserDataContext);
+  const {userDetails,setUserDetails,setIsLoggedIn} = useContext(UserDataContext);
+   
+    
   return (
     <div 
         className="container"
     >
       <form
-	  		onSubmit={(event)=>handleLoginSubmit(event,navigate)}
+	  		onSubmit={(event)=>handleLoginSubmit(event,navigate,userDetails,setUserDetails,setIsLoggedIn)}
         onChange={(event)=>handleDataChange(event,userDetails,setUserDetails) }
 		  >
         <InputField 
