@@ -17,6 +17,7 @@ const Login = () => {
         className="container"
     >
       <form
+        method="post"
 	  		onSubmit={(event)=>handleLoginSubmit(event,navigate,userDetails,setUserDetails,setIsLoggedIn)}
         onChange={(event)=>handleDataChange(event,userDetails,setUserDetails) }
 		  >
