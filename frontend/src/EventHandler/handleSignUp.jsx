@@ -1,13 +1,18 @@
+const handleSignUpSubmit = (event, navigate, userDetails, setIsLoggedIn) => {
 
-export const handleLoginSubmit = (event, navigate, userDetails, setIsLoggedIn) => {
 
     event.preventDefault();
+
     let URL = `http://localhost/3000/users/login?userName=${userDetails.userName}&email=${userDetails.email}&password=${userDetails.password}`;
     console.log(URL);
 
     setIsLoggedIn(true);
 
-    navigate('/dashboard');
+    navigate('/login');
+
+
+
 
 };
 
+export default handleSignUpSubmit;

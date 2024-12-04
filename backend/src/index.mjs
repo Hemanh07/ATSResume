@@ -2,6 +2,7 @@
 import express, { request, response } from "express";
 import { readFile, writeFile, appendFile } from "fs/promises";
 import path from "path";
+
 // app section
 const app = express();
 const filePath = path.join("data", "userData.json");

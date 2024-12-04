@@ -1,49 +1,48 @@
 import { React, useContext } from "react";
 import "../styles/login.css";
-import { useNavigate } from "react-router-dom";
 import InputField from "../Components/InputField";
- import PasswordField from "../Components/PasswordField";
-import { UserDataContext } from "../Context/LoginContext";
-import {handleLoginSubmit} from '../EventHandler/handleLogin'
+import PasswordField from "../Components/PasswordField";
+import { handleLoginSubmit } from '../EventHandler/handleLogin'
 import { handleDataChange } from "../EventHandler/handleChange";
+import SubmitButton from "../Components/SubmitButton";
+import AuthenticationFooter from "../Components/AuthenticationFooter";
+import { UserDataContext } from "../Context/LoginContext";
+import { useNavigate } from "react-router-dom";
 
 const Login = () => {
+
+  let { userDetails, setUserDetails, setIsLoggedIn } = useContext(UserDataContext);
   const navigate = useNavigate();
-  const {userDetails,setUserDetails,setIsLoggedIn} = useContext(UserDataContext);
-   
-    
+
   return (
-    <div 
-        className="container"
+    <div
+      className="container"
     >
       <form
         method="post"
-	  		onSubmit={(event)=>handleLoginSubmit(event,navigate,userDetails,setUserDetails,setIsLoggedIn)}
-        onChange={(event)=>handleDataChange(event,userDetails,setUserDetails) }
-		  >
-        <InputField 
-          fieldName="userName" 
-          inputType="text" 
+        onSubmit={(event) => handleLoginSubmit(event, navigate, userDetails, setIsLoggedIn)}
+        onChange={(event) => handleDataChange(event, userDetails, setUserDetails)}
+      >
+        <InputField
+          fieldName="userName"
+          inputType="text"
         />
-        <InputField 
-          fieldName="email" 
-          inputType="email" 
+        <InputField
+          fieldName="email"
+          inputType="email"
         />
-        <PasswordField 
-          fieldName='password' 
+        <PasswordField
+          fieldName='password'
+        />
+        <SubmitButton
+          fieldName='login'
+          target='dashboard'
+        />
+        <AuthenticationFooter
+          query="Don't have an Account"
+          target='signup'
         />
 
-        <button type="submit" className="loginButton">
-          Login
-        </button>
-        <i>
-          Don't have an Account ??{" "}
-          <span 
-            onClick={() => navigate("/signup")}
-          >
-            Sign Up
-          </span>
-        </i>
       </form>
     </div>
   );
