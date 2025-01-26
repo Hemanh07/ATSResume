@@ -37,3 +37,8 @@ li{
 #signup{
     background-color: rgb(205, 2, 2);
 }
+
+
+.errorMessage{
+    color: red;
+}

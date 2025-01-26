@@ -8,6 +8,7 @@ import SubmitButton from "../Components/SubmitButton";
 import AuthenticationFooter from "../Components/AuthenticationFooter";
 import { UserDataContext } from "../Context/LoginContext";
 import { useNavigate } from "react-router-dom";
+import ErrorMessage from "../Components/ErrorMessage";
 
 const Login = () => {
 
@@ -34,6 +35,7 @@ const Login = () => {
         <PasswordField
           fieldName='password'
         />
+        <ErrorMessage />
         <SubmitButton
           fieldName='login'
           target='dashboard'

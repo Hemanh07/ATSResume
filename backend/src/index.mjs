@@ -2,7 +2,8 @@
 import express, { request, response } from "express";
 import { readFile, writeFile, appendFile } from "fs/promises";
 import path from "path";
-
+import cors from "cors";
+import { routeLogger } from "../middleware/routeLogger.mjs";
 // app section
 const app = express();
 const filePath = path.join("data", "userData.json");
@@ -11,13 +12,17 @@ const filePath = path.join("data", "userData.json");
 
 app.use(express.json());
 app.use(express.static("../data"));
+app.use(cors());
+// custom middleware
+
+app.use(routeLogger);
 
 // route section
 
 //home route
-
-app.get("/", (request, response) => {
-  console.log(request.query);
+let count = 0;
+app.post("/", (request, response) => {
+  console.log(request.body, count++);
   response.send("hello");
 });
 
@@ -209,7 +214,7 @@ app.delete("/users/:id", async (request, response) => {
 // server section
 
 //  use port 3000 unless there exists a preconfigured port
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 3500;
 //listening to the port for api calls
 app.listen(PORT, () => {
   console.log(`the server is running on the port ${PORT}`);

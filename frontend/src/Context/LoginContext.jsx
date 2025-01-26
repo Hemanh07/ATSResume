@@ -17,10 +17,11 @@ export const UserDataProvider = ({ children }) => {
 
     });
     const [isLoggedIn, setIsLoggedIn] = useState(false);
+    const [errorMessage, setErrorMessage] = useState("hello");
     return (
         <UserDataContext.Provider
             value={{
-                userDetails, setUserDetails, isLoggedIn, setIsLoggedIn, APP_NAME
+                userDetails, setUserDetails, isLoggedIn, setIsLoggedIn, APP_NAME, errorMessage, setErrorMessage
             }}
         >
             {children}

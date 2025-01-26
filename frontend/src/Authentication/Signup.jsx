@@ -9,6 +9,7 @@ import { handleDataChange } from "../EventHandler/handleChange";
 import handleSignUpSubmit from "../EventHandler/handleSignUp";
 import { UserDataContext } from "../Context/LoginContext";
 import { useNavigate } from "react-router-dom";
+import ErrorMessage from "../Components/ErrorMessage";
 
 const Signup = () => {
   let { userDetails, setUserDetails, setIsLoggedIn } = useContext(UserDataContext);
@@ -44,6 +45,7 @@ const Signup = () => {
         <PasswordField
           fieldName='confrimPassword'
         />
+        <ErrorMessage />
         <SubmitButton
           fieldName='signup'
           target='login'

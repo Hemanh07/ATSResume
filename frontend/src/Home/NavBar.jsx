@@ -1,6 +1,7 @@
 import React, { useContext } from "react";
 import { UserDataContext } from "../Context/LoginContext";
 import { useNavigate } from "react-router-dom";
+import SubmitButton from "../Components/SubmitButton";
 
 const NavBar = () => {
     const { isLoggedIn, setIsLoggedIn } = useContext(UserDataContext);
@@ -14,7 +15,10 @@ const NavBar = () => {
                         navigate('/')
                     }}
                         id="home">
-                        Home
+                        <SubmitButton
+                            fieldName="Home"
+                            target=""
+                        />
                     </li>
                     <li onClick={() => {
                         navigate('/login')
@@ -37,7 +41,10 @@ const NavBar = () => {
                         navigate('/')
                     }}
                         id="home">
-                        Home
+                        <SubmitButton
+                            fieldName="Home"
+                            target=""
+                        />
                     </li>
                     <li onClick={() => {
                         setIsLoggedIn(false);
