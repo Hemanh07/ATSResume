@@ -17,7 +17,7 @@ export const UserDataProvider = ({ children }) => {
 
     });
     const [isLoggedIn, setIsLoggedIn] = useState(false);
-    const [errorMessage, setErrorMessage] = useState("hello");
+    const [errorMessage, setErrorMessage] = useState("");
     return (
         <UserDataContext.Provider
             value={{
