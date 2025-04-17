@@ -1,8 +1,10 @@
 import { logger } from "../Logger/logger.mjs";
 
-export const routeLogger = (request, response, next) => {
+const requestLogger = (request, response, next) => {
   let message = ` ${request.method} \t ${request.headers.origin} \t ${request.path}`;
-  let FILE_NAME = "routeLog.txt";
+  let FILE_NAME = "requestLog.txt";
   logger(message, FILE_NAME);
   next();
 };
+
+export default requestLogger;

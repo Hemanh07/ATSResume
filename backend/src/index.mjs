@@ -3,7 +3,6 @@ import express, { request, response } from "express";
 import { readFile, writeFile, appendFile } from "fs/promises";
 import path from "path";
 import cors from "cors";
-import { routeLogger } from "../middleware/routeLogger.mjs";
 // app section
 const app = express();
 const filePath = path.join("data", "userData.json");
@@ -15,15 +14,14 @@ app.use(express.static("../data"));
 app.use(cors());
 // custom middleware
 
-app.use(routeLogger);
-
 // route section
 
 //home route
 let count = 0;
-app.post("/", (request, response) => {
+app.post("/", async (request, response) => {
   console.log(request.body, count++);
-  response.send("hello");
+
+  response.send("hello").status(200);
 });
 
 // routing parameter
