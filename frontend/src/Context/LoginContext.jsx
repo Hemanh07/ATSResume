@@ -5,7 +5,7 @@ export const UserDataContext = createContext({});
 
 
 export const UserDataProvider = ({ children }) => {
-    const APP_NAME = "ATS RESUME GENERATOR";
+    const APP_NAME = "https://static.naukimg.com/s/0/0/i/ni-hamburger/nc_new_logo.svg";
 
     const [userDetails, setUserDetails] = useState({
         userName: "",

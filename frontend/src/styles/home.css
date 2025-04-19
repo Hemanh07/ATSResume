@@ -1,13 +1,12 @@
 h1{
     display: inline-block;
-    font-size: 50px;
-}
+ }
 nav ,li{
     display: inline-block;
 }
 header{
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
 }
 
@@ -24,12 +23,7 @@ li{
     align-items: center;
 }
 #login,#signup,#logout{
-    border: 3px rgb(255, 255, 255) solid;
-    border-radius: 500px;
-    background-color: rgb(3, 55, 3);
-    color: #ffffff;
-    font-size: 25px;
-    padding: 10px;
+  
 
     
 }

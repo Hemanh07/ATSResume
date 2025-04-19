@@ -1,0 +1,11 @@
+.navbar-floater{
+    position: absolute;
+    padding: 10px;
+    border-radius: 20px;
+ }
+.list-item{
+    width: 100%;
+ display: flex;
+justify-content: flex-start;
+}
+  

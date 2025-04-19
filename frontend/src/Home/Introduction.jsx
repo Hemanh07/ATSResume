@@ -1,13 +1,13 @@
-import React from 'react'
-import { useNavigate } from 'react-router-dom'
+import React from "react";
+import { useNavigate } from "react-router-dom";
 
 const Introduction = () => {
-    const navigate= useNavigate();
+  const navigate = useNavigate();
   return (
-    <div><h1>home</h1>
-      <button onClick={() => navigate('/signup')}>Get Started</button>
-    </div>
-  )
-}
+    <div>
 
-export default Introduction
+    </div>
+  );
+};
+
+export default Introduction;

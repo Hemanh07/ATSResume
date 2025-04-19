@@ -10,11 +10,12 @@ const Header = () => {
 
     return (
         <header>
-            <h1 onClick={() => {
+            <img onClick={() => {
                 navigate('/')
-            }}>
-                {APP_NAME}
-            </h1>
+            }}
+                src={APP_NAME}
+            >
+            </img>
             <NavBar />
 
         </header>
