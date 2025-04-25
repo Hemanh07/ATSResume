@@ -8,10 +8,10 @@ const NavBar = () => {
     const { isLoggedIn, setIsLoggedIn } = useContext(UserDataContext);
     const navigate = useNavigate();
     return (
-        <nav>
+        <nav className="navbar">
 
             {!isLoggedIn &&
-                <ul>
+                <ul className="navbar-list">
                     <NavBarElement
                         name="Prepare"
                         key="Prepare"
@@ -46,8 +46,10 @@ const NavBar = () => {
                             { name: "Saved jobs" },
                         ]}
                     />
+                    <div className="search-box" >
+                        <input type="search" className="job-search" id="job-search" placeholder="Search jobs here" />
 
-                    <input type="text" name="job-search" id="job-search" placeholder="Search jobs here" />
+                    </div>
                 </ul> ||
 
                 <ul>
